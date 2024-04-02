@@ -1,0 +1,19 @@
+{
+  "name": "tsc-runtime-type-benchmarks",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "bun-types": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@sinclair/typebox": "^0.32.20",
+    "arktype": "^1.0.29-alpha",
+    "io-ts": "^2.2.21",
+    "valibot": "^0.30.0",
+    "yup": "^1.4.0",
+    "zod": "^3.22.4"
+  }
+}
