@@ -1,12 +1,19 @@
 # tsc-runtime-type-benchmarks
 
+## Goal
+
+like https://github.com/moltar/typescript-runtime-type-benchmarks` but for tsc
+speed instead of runtime speed
+
+## Install
+
 To install dependencies:
 
 ```bash
 bun install
 ```
 
-To run:
+## Running tests
 
 ```bash
 ## generate all API clients
