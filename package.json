@@ -3,7 +3,14 @@
   "module": "index.ts",
   "type": "module",
   "scripts": {
-    "run:ts": "tsc -p ./cases/typescript/tsconfig.json --generateTrace trace-dir && bun x @typescript/analyze-trace trace-dir --forceMillis=100 --skipMillis=50"
+    "run:arktype": "tsc -p ./cases/arktype/tsconfig.json --generateTrace trace-dir && bun x @typescript/analyze-trace trace-dir --forceMillis=100 --skipMillis=50",
+    "run:io-ts": "tsc -p ./cases/io-ts/tsconfig.json --generateTrace trace-dir && bun x @typescript/analyze-trace trace-dir --forceMillis=100 --skipMillis=50",
+    "run:typebox": "tsc -p ./cases/typebox/tsconfig.json --generateTrace trace-dir && bun x @typescript/analyze-trace trace-dir --forceMillis=100 --skipMillis=50",
+    "run:ts": "tsc -p ./cases/typescript/tsconfig.json --generateTrace trace-dir && bun x @typescript/analyze-trace trace-dir --forceMillis=100 --skipMillis=50",
+    "run:valibot": "tsc -p ./cases/valibot/tsconfig.json --generateTrace trace-dir && bun x @typescript/analyze-trace trace-dir --forceMillis=100 --skipMillis=50",
+    "run:yup": "tsc -p ./cases/yup/tsconfig.json --generateTrace trace-dir && bun x @typescript/analyze-trace trace-dir --forceMillis=100 --skipMillis=50",
+    "run:zod": "tsc -p ./cases/zod/tsconfig.json --generateTrace trace-dir && bun x @typescript/analyze-trace trace-dir --forceMillis=100 --skipMillis=50",
+    "run:all": "concurrently -n arktype,io-ts,typebox,ts,valibot,yup,zod -c 'blue,green,yellow,magenta,cyan,red,white' 'bun run run:arktype' 'bun run run:io-ts' 'bun run run:typebox' 'bun run run:ts' 'bun run run:valibot' 'bun run run:yup' 'bun run run:zod'"
   },
   "devDependencies": {
     "bun-types": "latest"
@@ -16,6 +23,7 @@
     "@sinclair/typebox": "^0.32.20",
     "@typescript/analyze-trace": "^0.10.1",
     "arktype": "^1.0.29-alpha",
+    "concurrently": "^8.2.2",
     "io-ts": "^2.2.21",
     "openapi3-ts": "^4.3.1",
     "typed-openapi": "^0.4.1",
