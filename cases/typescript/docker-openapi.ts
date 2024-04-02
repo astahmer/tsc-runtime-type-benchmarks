@@ -1136,7 +1136,8 @@ export namespace Endpoints {
       MountLabel: string;
       ProcessLabel: string;
       AppArmorProfile: string;
-      ExecIDs: Array<string> | Schemas.null;
+      // updated codegen
+      ExecIDs: Array<string> | null;
       HostConfig: Schemas.HostConfig;
       GraphDriver: Schemas.GraphDriverData;
       SizeRw: number;
@@ -1637,7 +1638,8 @@ export namespace Endpoints {
         AttachStdin: boolean;
         AttachStdout: boolean;
         AttachStderr: boolean;
-        ConsoleSize: Array<number> | Schemas.null;
+        // updated codegen
+        ConsoleSize: Array<number> | null;
         DetachKeys: string;
         Tty: boolean;
         Env: Array<string>;
@@ -1658,7 +1660,8 @@ export namespace Endpoints {
       body: Partial<{
         Detach: boolean;
         Tty: boolean;
-        ConsoleSize: Array<number> | Schemas.null;
+        // updated codegen
+        ConsoleSize: Array<number> | null;
       }>;
     };
     response: unknown;

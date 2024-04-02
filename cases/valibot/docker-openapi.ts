@@ -1026,7 +1026,8 @@ export const JoinTokens = v.object({
 
 export type Swarm = v.Output<typeof Swarm>;
 export const Swarm = v.merge([
-  ClusterInfo,
+  // updated codegen
+  ClusterInfo as any,
   v.object({
     JoinTokens: v.optional(JoinTokens),
   }),
@@ -3176,7 +3177,8 @@ export const post_ServiceCreate = v.object({
     header: v.object({
       "X-Registry-Auth": v.optional(v.string()),
     }),
-    body: v.merge([ServiceSpec, v.unknown()]),
+    // updated codegen
+    body: v.merge([ServiceSpec, v.unknown() as any]),
   }),
   response: ServiceCreateResponse,
 });
@@ -3227,7 +3229,8 @@ export const post_ServiceUpdate = v.object({
     header: v.object({
       "X-Registry-Auth": v.optional(v.string()),
     }),
-    body: v.merge([ServiceSpec, v.unknown()]),
+    // updated codegen
+    body: v.merge([ServiceSpec, v.unknown() as any]),
   }),
   response: ServiceUpdateResponse,
 });
@@ -3315,7 +3318,8 @@ export const post_SecretCreate = v.object({
   method: v.literal("POST"),
   path: v.literal("/secrets/create"),
   parameters: v.object({
-    body: v.merge([SecretSpec, v.unknown()]),
+    // updated codegen
+    body: v.merge([SecretSpec, v.unknown() as any]),
   }),
   response: IdResponse,
 });
@@ -3377,7 +3381,8 @@ export const post_ConfigCreate = v.object({
   method: v.literal("POST"),
   path: v.literal("/configs/create"),
   parameters: v.object({
-    body: v.merge([ConfigSpec, v.unknown()]),
+    // updated codegen
+    body: v.merge([ConfigSpec, v.unknown() as any]),
   }),
   response: IdResponse,
 });

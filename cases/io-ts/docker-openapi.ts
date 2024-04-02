@@ -2555,7 +2555,8 @@ export type get_SystemInfo = t.TypeOf<typeof get_SystemInfo>;
 export const get_SystemInfo = t.type({
   method: t.literal("GET"),
   path: t.literal("/info"),
-  parameters: t.never,
+  // updated codegen
+  parameters: t.never as any,
   response: SystemInfo,
 });
 
@@ -2563,7 +2564,8 @@ export type get_SystemVersion = t.TypeOf<typeof get_SystemVersion>;
 export const get_SystemVersion = t.type({
   method: t.literal("GET"),
   path: t.literal("/version"),
-  parameters: t.never,
+  // updated codegen
+  parameters: t.never as any,
   response: SystemVersion,
 });
 
@@ -2571,7 +2573,8 @@ export type get_SystemPing = t.TypeOf<typeof get_SystemPing>;
 export const get_SystemPing = t.type({
   method: t.literal("GET"),
   path: t.literal("/_ping"),
-  parameters: t.never,
+  // updated codegen
+  parameters: t.never as any,
   response: t.unknown,
 });
 
@@ -2579,7 +2582,8 @@ export type head_SystemPingHead = t.TypeOf<typeof head_SystemPingHead>;
 export const head_SystemPingHead = t.type({
   method: t.literal("HEAD"),
   path: t.literal("/_ping"),
-  parameters: t.never,
+  // updated codegen
+  parameters: t.never as any,
   response: t.unknown,
 });
 
@@ -3167,7 +3171,8 @@ export type get_SwarmInspect = t.TypeOf<typeof get_SwarmInspect>;
 export const get_SwarmInspect = t.type({
   method: t.literal("GET"),
   path: t.literal("/swarm"),
-  parameters: t.never,
+  // updated codegen
+  parameters: t.never as any,
   response: Swarm,
 });
 
@@ -3238,7 +3243,8 @@ export type get_SwarmUnlockkey = t.TypeOf<typeof get_SwarmUnlockkey>;
 export const get_SwarmUnlockkey = t.type({
   method: t.literal("GET"),
   path: t.literal("/swarm/unlockkey"),
-  parameters: t.never,
+  // updated codegen
+  parameters: t.never as any,
   response: t.type({
     UnlockKey: t.union([t.undefined, t.string]),
   }),
@@ -3539,7 +3545,8 @@ export type post_Session = t.TypeOf<typeof post_Session>;
 export const post_Session = t.type({
   method: t.literal("POST"),
   path: t.literal("/session"),
-  parameters: t.never,
+  // updated codegen
+  parameters: t.never as any,
   response: t.unknown,
 });
 
