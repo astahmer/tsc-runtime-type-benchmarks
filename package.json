@@ -2,6 +2,9 @@
   "name": "tsc-runtime-type-benchmarks",
   "module": "index.ts",
   "type": "module",
+  "scripts": {
+    "run:ts": "tsc -p ./cases/typescript/tsconfig.json --generateTrace trace-dir && bun x @typescript/analyze-trace trace-dir --forceMillis=100 --skipMillis=50"
+  },
   "devDependencies": {
     "bun-types": "latest"
   },
@@ -9,9 +12,13 @@
     "typescript": "^5.0.0"
   },
   "dependencies": {
+    "@apidevtools/swagger-parser": "^10.1.0",
     "@sinclair/typebox": "^0.32.20",
+    "@typescript/analyze-trace": "^0.10.1",
     "arktype": "^1.0.29-alpha",
     "io-ts": "^2.2.21",
+    "openapi3-ts": "^4.3.1",
+    "typed-openapi": "^0.4.1",
     "valibot": "^0.30.0",
     "yup": "^1.4.0",
     "zod": "^3.22.4"
