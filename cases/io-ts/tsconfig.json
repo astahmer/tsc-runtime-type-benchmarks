@@ -1,4 +1,4 @@
 {
   "extends": "../../tsconfig.bench.json",
-  "include": ["petstore.ts"]
+  "include": ["petstore.ts", "docker-openapi.ts"]
 }

@@ -2478,14 +2478,22 @@ export function createApiClient(fetcher: Fetcher, baseUrl?: string) {
   return new ApiClient(fetcher).setBaseUrl(baseUrl ?? "");
 }
 
-/**
-   Example usage:
-   const api = createApiClient((method, url, params) =>
-     fetch(url, { method, body: JSON.stringify(params) }).then((res) => res.json()),
-   );
-   api.get("/users").then((users) => console.log(users));
-   api.post("/users", { body: { name: "John" } }).then((user) => console.log(user));
-   api.put("/users/:id", { path: { id: 1 }, body: { name: "John" } }).then((user) => console.log(user));
-  */
+const api = createApiClient((method, url, params) =>
+  fetch(url, { method, body: JSON.stringify(params) }).then((res) => res.json())
+);
+api
+  .get("/containers/{id}/archive", {
+    path: { id: "aaa" },
+    query: { path: "bbb" },
+  })
+  .then((res) => console.log(res));
+
+api.get("/users").then((users) => console.log(users));
+api
+  .post("/users", { body: { name: "John" } })
+  .then((user) => console.log(user));
+api
+  .put("/users/:id", { path: { id: 1 }, body: { name: "John" } })
+  .then((user) => console.log(user));
 
 // </ApiClient
