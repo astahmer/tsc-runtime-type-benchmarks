@@ -2,7 +2,7 @@
 
 ## Goal
 
-like https://github.com/moltar/typescript-runtime-type-benchmarks` but for tsc
+like https://github.com/moltar/typescript-runtime-type-benchmarks but for tsc
 speed instead of runtime speed
 
 ## Install
