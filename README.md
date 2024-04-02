@@ -9,7 +9,17 @@ bun install
 To run:
 
 ```bash
-bun run index.ts
+## generate all API clients
+## unfortunately, they suck
+bun run main.ts
 ```
 
-This project was created using `bun init` in bun v1.0.6. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
+```bash
+## run tsc
+## unfortunately, API clients have TS errors so this ruins the entire thing
+bun run:all
+```
+
+## Results
+
+TODO (probably never, was a nice try)
